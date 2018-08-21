@@ -1,10 +1,30 @@
-## React Library Template
+# React Dropdown
 
-#### Supports
+## Install
+`npm i -S https://github.com/majoer/react.component.dropdown.git`
 
-- jsx
-- scss
+## How to use 
+```
+class App extends Component {
 
-#### Credits
+  state = {
+    isDropdownOpen: false
+  }
 
-https://medium.freecodecamp.org/part-1-react-app-from-scratch-using-webpack-4-562b1d231e75
+  render() {
+    return (
+      <div className="app">
+        <button onClick={() => this.setState({ isDropdownOpen: !this.state.isDropdownOpen })}>
+          Dropdown
+        </button>
+
+        <div className="app__dropdown">
+          <DropdownComponent dropdownOpen={this.state.isDropdownOpen} onOutsideClick={() => this.setState({ isDropdownOpen: false })}>
+            <p>Hei</p>
+          </DropdownComponent>
+        </div>
+      </div>
+    );
+  }
+};
+```
