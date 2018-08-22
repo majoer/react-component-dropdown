@@ -2,9 +2,9 @@
   "name": "react-component-dropdown",
   "version": "1.0.0",
   "description": "",
-  "main": "src/lib/index.js",
+  "main": "dist/index.js",
   "files": [
-    "src/lib/**/*"
+    "dist/**/*"
   ],
   "scripts": {
     "clean": "rimraf dist",
